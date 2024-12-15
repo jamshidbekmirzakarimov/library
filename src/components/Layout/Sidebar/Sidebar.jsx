@@ -1,12 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Sidebar = () => {
+  const location = useLocation();
   return (
-    <div className="relative bg-[#1a1a1a] h-full" >
+    <div className="relative bg-[#1D1D41] h-full">
+      <h1 className="p-[20px] text-[20px] text-white">Education</h1>
       <ul className="">
         <li>
-          <Link to="admin/dashboard" className="ps-[20px] py-[10px] hover:bg-[#00afa6] duration-300 flex items-center">
+          <Link
+            to="dashboard"
+            className={`ps-[20px] py-[10px] hover:bg-[#00afa6] duration-300 flex items-center ${
+              location.pathname === "/admin/dashboard" ? "bg-[#00afa6]" : ""
+            }`}
+          >
             <div className="me-[10px]">
               <svg
                 width={20}
@@ -23,7 +30,12 @@ const Sidebar = () => {
         </li>
 
         <li>
-          <Link to="admin/books" className="ps-[20px] py-[10px] hover:bg-[#00afa6] duration-300 flex items-center">
+          <Link
+            to="books"
+            className={`ps-[20px] py-[10px] hover:bg-[#00afa6] duration-300 flex items-center ${
+              location.pathname === "/admin/books" ? "bg-[#00afa6]" : ""
+            }`}
+          >
             <div className="me-[10px]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +52,10 @@ const Sidebar = () => {
         </li>
 
         <li>
-          <Link to="admin/students" className="ps-[20px] py-[10px] hover:bg-[#00afa6] duration-300 flex items-center">
+          <Link
+            to="students"
+            className="ps-[20px] py-[10px] hover:bg-[#00afa6] duration-300 flex items-center"
+          >
             <div className="me-[10px]">
               <svg
                 width={20}
@@ -54,12 +69,18 @@ const Sidebar = () => {
             </div>
             <h3 className="text-[#ecffdc]">Students</h3>
           </Link>
-          <Link to="admin/group" className="ps-[20px] py-[10px] hover:bg-[#00afa6] duration-300 flex items-center">
+          <Link
+            to="group"
+            className="ps-[20px] py-[10px] hover:bg-[#00afa6] duration-300 flex items-center"
+          >
             <div className="me-[10px]">
-              <svg xmlns="http://www.w3.org/2000/svg"
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
                 width={20}
                 height={20}
-                fill="#ecffdc" viewBox="0 0 640 512">
+                fill="#ecffdc"
+                viewBox="0 0 640 512"
+              >
                 <path d="M211.2 96a64 64 0 1 0 -128 0 64 64 0 1 0 128 0zM32 256c0 17.7 14.3 32 32 32l85.6 0c10.1-39.4 38.6-71.5 75.8-86.6c-9.7-6-21.2-9.4-33.4-9.4l-96 0c-35.3 0-64 28.7-64 64zm461.6 32l82.4 0c17.7 0 32-14.3 32-32c0-35.3-28.7-64-64-64l-96 0c-11.7 0-22.7 3.1-32.1 8.6c38.1 14.8 67.4 47.3 77.7 87.4zM391.2 226.4c-6.9-1.6-14.2-2.4-21.6-2.4l-96 0c-8.5 0-16.7 1.1-24.5 3.1c-30.8 8.1-55.6 31.1-66.1 60.9c-3.5 10-5.5 20.8-5.5 32c0 17.7 14.3 32 32 32l224 0c17.7 0 32-14.3 32-32c0-11.2-1.9-22-5.5-32c-10.8-30.7-36.8-54.2-68.9-61.6zM563.2 96a64 64 0 1 0 -128 0 64 64 0 1 0 128 0zM321.6 192a80 80 0 1 0 0-160 80 80 0 1 0 0 160zM32 416c-17.7 0-32 14.3-32 32s14.3 32 32 32l576 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 416z" />
               </svg>
             </div>
@@ -68,7 +89,10 @@ const Sidebar = () => {
         </li>
 
         <li>
-          <Link to="admin/settings" className="ps-[20px] py-[10px] hover:bg-[#00afa6] duration-300 flex items-center">
+          <Link
+            to="settings"
+            className="ps-[20px] py-[10px] hover:bg-[#00afa6] duration-300 flex items-center"
+          >
             <div className="me-[10px]">
               <svg
                 width={20}
@@ -85,12 +109,16 @@ const Sidebar = () => {
         </li>
       </ul>
       <button className="absolute flex items-center gap-[10px] bottom-[20px] left-[20px] text-[#ecffdc]">
-      <svg xmlns="http://www.w3.org/2000/svg" 
-       width={20}
-       height={20}
-       fill="#ecffdc"
-       viewBox="0 0 512 512"><path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 192 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l210.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128zM160 96c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 32C43 32 0 75 0 128L0 384c0 53 43 96 96 96l64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l64 0z"/></svg>
-       Log out
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width={20}
+          height={20}
+          fill="#ecffdc"
+          viewBox="0 0 512 512"
+        >
+          <path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 192 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l210.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128zM160 96c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 32C43 32 0 75 0 128L0 384c0 53 43 96 96 96l64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l64 0z" />
+        </svg>
+        Log out
       </button>
     </div>
   );

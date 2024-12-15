@@ -1,5 +1,6 @@
 import React from "react";
 import InputField from "../../constants/InputField/InputFiled";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -19,11 +20,11 @@ const Login = () => {
               label="Password"
               placeholder="Enter Your Username"
             />
-            {/* <Link to="/information"> */}
+            <Link to="/admin/dashboard">
             <button className="text-[14px] w-[311px] py-[15px] text-[#fff] bg-[#000] font-bold leading-normal">
               Login
             </button>
-            {/* </Link> */}
+            </Link>
           </form>
         </div>
       </div>

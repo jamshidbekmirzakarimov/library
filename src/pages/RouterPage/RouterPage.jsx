@@ -12,14 +12,14 @@ const RouterPage = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Navigate to="/login" />} />
+        <Route path="/" element={<Navigate to="/login" replace />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/admin" element={<Layout />} >
-        <Route path="admin/dashboard" element={<Dashboard/>} />
-        <Route path="admin/books" element={<Books/>} />
-        <Route path="admin/students" element={<Students/>}/>
-        <Route path="admin/group" element={<Group/>}/>
-        <Route path="admin/settings" element={<Settings/>}/>
+        <Route path="/admin" element={<Layout />}>
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="books" element={<Books />} />
+          <Route path="students" element={<Students />} />
+          <Route path="group" element={<Group />} />
+          <Route path="settings" element={<Settings />} />
         </Route>
       </Routes>
     </>
