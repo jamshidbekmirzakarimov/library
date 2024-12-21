@@ -219,21 +219,21 @@ const Books = () => {
       ) : error ? (
         <p className="text-red-500">Error: {error}</p>
       ) : (
-        <ul className="mt-4 h-[93%] overflow-x-auto pe-[5px] scrollbar-thin scrollbar-thumb-blue-500 scrollbar-track-gray-100">
+        <ul className="flex gap-x-[10px] gap-y-[4px]  justify-center flex-wrap mt-4 h-[93%] overflow-x-auto pe-[5px] scrollbar-thin scrollbar-thumb-blue-500 scrollbar-track-gray-100">
           {books.map((book) => (
             <li
               key={book.id}
-              className="flex p-4 border rounded-md mb-2 shadow-sm bg-white gap-[10px]"
+              className="w-[48%] flex p-4 border rounded-md mb-2 shadow-sm bg-white dark:bg-[#1D1D41] gap-[10px]"
             >
               <img
-                className="object-cover rounded-[5px] w-[80px] h-[100px]"
-                src={book.avatar}
+                className="object-cover rounded-[5px] w-[150px] h-[200px]"
+                src={"https://m.media-amazon.com/images/I/81ANaVZk5LL._SL1500_.jpg"}
                 alt=""
                 loading="lazy"
               />
               <div className="w-full">
-                <h3 className=" text-base font-normal">
-                  <span className="text-lg font-semibold">Book title:</span>{" "}
+                <h3 className=" text-base font-normal text-[#1D1D41] dark:text-[#fff]">
+                  <span className="text-lg font-semibold text-[#1D1D41] dark:text-[#fff]">Book title:</span>{" "}
                   {book.name}
                 </h3>
                 <p className=" text-base font-normal">
@@ -246,8 +246,8 @@ const Books = () => {
                   </span>{" "}
                   {book.description}
                 </p>
-                <div className="flex justify-end">
-                  <div className="flex gap-[10px] w-[250px]">
+                <div className="flex ">
+                  <div className="flex gap-[10px] ">
                     <button
                       type="submit"
                       className={`flex items-center justify-center gap-[10px] w-1/2 px-4 py-1 rounded-md 

@@ -1,4 +1,3 @@
-import { data } from "autoprefixer";
 import { useState, useEffect, useCallback } from "react";
 
 export const useGetBooks = (url) => {
@@ -28,7 +27,7 @@ export const useGetBooks = (url) => {
       setLoading(false);
     }
   }, [url]);
-console.log(books, "get data")
+  console.log(books, "get datalarr");
   useEffect(() => {
     fetchBooks(); // Automatically fetch books on component mount
   }, [fetchBooks]);
